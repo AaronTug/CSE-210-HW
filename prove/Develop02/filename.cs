@@ -1,0 +1,5 @@
+namespace JournalApp;
+class Filename
+{
+
+}
