@@ -14,6 +14,7 @@ class Program
         num = p.PromptUserNumber();
         square = p.SquareNumber(num);
         p.DisplayResults(name, square);
+
     }
 
     void DisplayWelcome()
