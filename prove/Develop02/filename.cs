@@ -1,5 +1,0 @@
-namespace JournalApp;
-class Filename
-{
-
-}
