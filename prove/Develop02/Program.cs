@@ -10,12 +10,32 @@ class Program
     public string curent = "";
     static void Main(string[] args)
     {
-        // GetEntry G = new GetEntry();
-        //G.get();
+        string current = " ";
         Program p = new Program();
-        //Console.WriteLine("Hello Develop02 World!");
-        //Console.Clear();
-        p.showMenu();
+        int select = p.showMenu();
+        Console.Clear();
+        do
+        {
+            if (select == 1)
+            {
+                GetEntry G = new GetEntry();
+                current = current + G.get();
+            }
+            else if (select == 2)
+            {
+
+            }
+            else if (select == 3)
+            {
+
+            }
+            else if (select == 4)
+            {
+                Console.WriteLine(current);
+
+            }
+            select = p.showMenu();
+        } while (select != 5);
     }
 
     int showMenu()
