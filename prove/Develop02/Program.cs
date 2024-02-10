@@ -23,16 +23,19 @@ class Program
             }
             else if (select == 2)
             {
+                Console.WriteLine($"{current}");
 
             }
             else if (select == 3)
             {
+                Files F = new Files();
+                F.Save(current);
 
             }
             else if (select == 4)
             {
-                Console.WriteLine(current);
-
+                Files F = new Files();
+                current = F.Load();
             }
             select = p.showMenu();
         } while (select != 5);

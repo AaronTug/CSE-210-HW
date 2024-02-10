@@ -7,7 +7,8 @@ class GetEntry
 
     public string get()
     {
-        date = "";//placeholder
+        DateTime Temp = DateTime.Now;
+        date = Temp.ToShortDateString();
         Random rnd = new Random();
         prompts.Add("What was the best thing that you did today?");
         prompts.Add("What goals did you work towards today?");
