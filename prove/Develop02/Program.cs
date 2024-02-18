@@ -5,43 +5,39 @@ using System.Transactions;
 namespace JournalApp;
 
 class Program
-//Journal project
 {
-    public string curent = "";
+    //Journal project
     static void Main(string[] args)
     {
-        string current = " ";
-        Program p = new Program();
-        int select = p.showMenu();
         Console.Clear();
+        int select = 6;
+        Journal j = new Journal();
         do
         {
+            select = getAction();
             if (select == 1)
             {
-                GetEntry G = new GetEntry();
-                current = current + G.get();
+                j.AddEntry(); // add entry to current journal
             }
             else if (select == 2)
             {
-                Console.WriteLine($"{current}");
-
+                j.Display(); //display jornal
             }
             else if (select == 3)
             {
-                Files F = new Files();
-                F.Save(current);
-
+                Console.WriteLine("What is the filename? ");
+                string filename = Console.ReadLine();
             }
             else if (select == 4)
             {
-                Files F = new Files();
-                current = F.Load();
+                Console.WriteLine("What is the filename? ");
+                string filename = Console.ReadLine();
             }
-            select = p.showMenu();
+            Console.Clear();
         } while (select != 5);
     }
 
-    int showMenu()
+    static int getAction()
     {
         Console.WriteLine(@"Please select an option
         1. New entry
