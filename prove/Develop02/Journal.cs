@@ -6,6 +6,10 @@ using Microsoft.VisualBasic;
 public class Journal
 {
     public List<Entry> entrys;
+    public Journal()
+    {
+        entrys = new List<Entry>();
+    }
     public List<string> prompts = new List<string>();
 
     public void AddEntry()
@@ -23,15 +27,16 @@ public class Journal
         towrite = prompts[thisOne];
         Console.WriteLine(towrite);
         string Resp = Console.ReadLine();
-        Entry e = new Entry(Time, towrite, Resp);
-        entrys.Add(e);
+        Entry entry = new Entry(Time, towrite, Resp);
+        entrys.Add(entry);
     }
 
     public void Display()
     {
-        foreach (var e in entrys)
+        foreach (var entry in entrys)
         {
-            Console.WriteLine(e.DisplayEntry);
+            string temp = entry.DisplayEntry;
+            Console.WriteLine(temp);
         }
     }
 

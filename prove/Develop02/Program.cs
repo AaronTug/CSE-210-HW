@@ -9,7 +9,6 @@ class Program
     //Journal project
     static void Main(string[] args)
     {
-        Console.Clear();
         int select = 6;
         Journal j = new Journal();
         do
@@ -33,7 +32,6 @@ class Program
                 Console.WriteLine("What is the filename? ");
                 string filename = Console.ReadLine();
             }
-            Console.Clear();
         } while (select != 5);
     }
 
