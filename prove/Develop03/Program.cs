@@ -11,19 +11,20 @@ class Program
 
     static void Main(string[] args)
     {
-        Program p = new Program();
-        p.giveOptions();
-        p.GiveScripture();
-        p.printReference(SripRef);
-        p.printScripture();
+        /*
+            giveOptions();
+            GiveScripture();
+            printReference(SripRef);
+            printScripture();
+        */
     }
 
-    void giveOptions()
+    static int giveOptions()
     {
         Console.WriteLine("Please Select the Scripture you would like to practice");
         Console.WriteLine("1-- 1st Nephi 3:7");
         Console.WriteLine("2-- D&C 8: 2-3");
-        selection = int.Parse(Console.ReadLine());
+        return (int.Parse(Console.ReadLine()));
     }
 
     void GiveScripture()

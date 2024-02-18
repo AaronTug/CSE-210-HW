@@ -1,14 +1,17 @@
 namespace JournalApp;
-class GetEntry
+public class Entry
 {
+    private string prompt;
+    private string date;
+    private string responce;
+
+
 
     public List<string> prompts = new List<string>();
-    public string date;
 
-    public string get()
+    public void get()
     {
         DateTime Temp = DateTime.Now;
-        date = Temp.ToShortDateString();
         Random rnd = new Random();
         prompts.Add("What was the best thing that you did today?");
         prompts.Add("What goals did you work towards today?");
@@ -17,6 +20,13 @@ class GetEntry
         prompts.Add("Write song lyrics to describe your day.");
         int thisOne = rnd.Next(prompts.Count);
         Console.WriteLine(prompts[thisOne]);
-        return (date + prompts[thisOne] + Console.ReadLine());
+        this.date = Temp.ToShortDateString();
+        this.prompt = prompts[thisOne];
+        this.responce = Console.ReadLine();
+    }
+
+    public string DisplayEntry()
+    {
+        return $"{this.date}: {this.prompt}: {this.responce}:";
     }
 }
