@@ -20,7 +20,7 @@ class Program
             }
             else if (select == 2)
             {
-                j.Display(); //display jornal
+                //j.Display(); //display jornal
             }
             else if (select == 3)
             {
