@@ -31,20 +31,20 @@ public class Journal
         entrys.Add(entry);
     }
 
-    /*temp  public void Display()
-      {
-          foreach (var entry in entrys)
-          {
-              string temp = entry.DisplayEntry;
-              Console.WriteLine(temp);
-          }
-      }
+    public void Display()
+    {
+        foreach (var entry in entrys)
+        {
+            string temp = entry.DisplayEntry();
+            Console.WriteLine(temp);
+        }
+    }
 
-      /* public Journal Load()
-       {
-           return ();
-       }
-   */
+    /* public Journal Load()
+     {
+         return ();
+     }
+ */
     public void Save()
     {
 

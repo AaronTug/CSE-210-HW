@@ -20,7 +20,7 @@ class Program
             }
             else if (select == 2)
             {
-                //j.Display(); //display jornal
+                j.Display(); //display jornal
             }
             else if (select == 3)
             {
@@ -31,6 +31,10 @@ class Program
             {
                 Console.WriteLine("What is the filename? ");
                 string filename = Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Invalid entry");
             }
         } while (select != 5);
     }
