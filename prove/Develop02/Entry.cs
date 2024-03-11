@@ -1,9 +1,9 @@
 namespace JournalApp;
 public class Entry
 {
-    private string prompt;
-    private string date;
-    private string responce;
+    public string prompt;
+    public string date;
+    public string responce;
 
     public Entry(string Date, string prompt1, string resp)
     {

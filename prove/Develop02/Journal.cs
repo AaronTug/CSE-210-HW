@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using JournalApp;
 using Microsoft.VisualBasic;
+using System.IO;
 
 public class Journal
 {
@@ -40,14 +41,20 @@ public class Journal
         }
     }
 
-    /* public Journal Load()
-     {
-         return ();
-     }
- */
-    public void Save()
+    public void Load(string filename)
     {
 
+    }
+
+    public void Save(string filename)
+    {
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach (Entry E in entrys)
+            {
+                outputFile.WriteLine($"{E.date}*{E.prompt}*{E.responce}\n");
+            }
+        }
     }
 
 }

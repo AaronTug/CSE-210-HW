@@ -22,15 +22,17 @@ class Program
             {
                 j.Display(); //display jornal
             }
-            else if (select == 3)
-            {
-                Console.WriteLine("What is the filename? ");
-                string filename = Console.ReadLine();
-            }
             else if (select == 4)
             {
                 Console.WriteLine("What is the filename? ");
                 string filename = Console.ReadLine();
+                j.Load(filename);
+            }
+            else if (select == 3)
+            {
+                Console.WriteLine("What is the filename? ");
+                string filename = Console.ReadLine();
+                j.Save(filename);
             }
             else
             {
