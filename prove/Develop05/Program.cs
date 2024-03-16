@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 class Program
 {
@@ -20,6 +21,10 @@ class Program
                     break;
 
                 case 2:
+                    foreach (var GoalS in G)
+                    {
+                        GoalS.display();
+                    }
 
                     break;
 

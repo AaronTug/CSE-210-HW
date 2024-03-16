@@ -1,11 +1,12 @@
 class GoalS
 {
     private int points = 0;
-    private string goal = "";
+    private string goalName = "";
+    private string goalDesc = "";
 
-    virtual public void disply()
+    public void display()
     {
-
+        Console.WriteLine("testing");
     }
 
 }
