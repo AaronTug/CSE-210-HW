@@ -8,5 +8,9 @@ class GoalS
     {
         Console.WriteLine("testing");
     }
+    public int compleate()
+    {
+        return -1;
+    }
 
 }

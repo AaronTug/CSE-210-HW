@@ -48,7 +48,7 @@ public class Journal
         foreach (string line in lines)
         {
             string[] parts = line.Split("*");
-            for (int i = 0; i >= parts.Length; i += 3)
+            for (int i = 0; i < parts.Length; i += 3)
             {
                 Entry entry = new Entry(parts[(0 + i)], parts[(1 + i)], parts[(2 + i)]);
                 entrys.Add(entry);
@@ -63,7 +63,7 @@ public class Journal
         {
             foreach (Entry E in entrys)
             {
-                outputFile.WriteLine($"{E.date}*{E.prompt}*{E.responce}\n");
+                outputFile.WriteLine($"{E.date}*{E.prompt}*{E.responce}*");
             }
         }
     }
