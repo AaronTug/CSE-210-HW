@@ -21,4 +21,13 @@ class Video
         comments.Add(c1);
     }
 
+    public void display()
+    {
+        Console.WriteLine($"{title}, {author}, {legnth}, # of comments: {comments.Count}");
+        foreach (var comment in comments)
+        {
+            comment.display();
+        }
+    }
+
 }

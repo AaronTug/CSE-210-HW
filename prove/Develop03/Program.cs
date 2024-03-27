@@ -2,8 +2,8 @@ using System;
 using System.Xml.Serialization;
 
 class Program
-{
-    private int selection;
+{/*
+    static private int selection;
     private string SripRef;
 
     Scripture choice = new Scripture();
@@ -11,12 +11,11 @@ class Program
 
     static void Main(string[] args)
     {
-        /*
-            giveOptions();
-            GiveScripture();
-            printReference(SripRef);
-            printScripture();
-        */
+        selection = giveOptions();
+        choice.GiveScripture(selection);
+        printReference(SripRef);
+        prepScripture();
+
     }
 
     static int giveOptions()
@@ -40,9 +39,20 @@ class Program
 
     }
 
-    void printScripture()
+    void prepScripture()
     {
+        string[] words = System.IO.File.ReadAllLines(filename);
+
+        foreach (string line in lines)
+        {
+            string[] parts = line.Split(" ");
+            for (int i = 0; i < parts.Length; i += 1)
+            {
+                string entry = new string(parts[(i)]);
+                words.Add(entry);
+            }
+        }
 
     }
-
+*/
 }
