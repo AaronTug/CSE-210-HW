@@ -6,7 +6,10 @@ class Address
     private string city;
     private string state;
     private string country;
-
+    public bool InUS;
+    public Address()
+    {
+    }
     public Address(string st, string ci, string sta, string count)
     {
         this.streetAdd = st;

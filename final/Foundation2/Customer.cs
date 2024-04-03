@@ -1,5 +1,10 @@
 class Customer
 {
-    private string name;
-    //private Address Home = new Address();
+    public string name;
+    public Address Home = new Address();
+
+    public string getship()
+    {
+        return ($"{name}, {Home}");
+    }
 }
