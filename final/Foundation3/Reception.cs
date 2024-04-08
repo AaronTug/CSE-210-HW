@@ -2,13 +2,16 @@ class Reception : Event
 {
     private List<string> atendies = new List<string>();
     private string RSVPemail;
-    public Reception(string title, string description, string date, string time, string place, string email)
+    private string place;
+    public Reception(string title, string description, string date, string time, string place1, string email)
     {
         this._title = title;
         this._description = description;
         this._date = date;
         this._time = time;
         this.RSVPemail = email;
+        Address Place = new Address(place1);
+        place = Place.getplace();
     }
     override public string GetDetails(int choice)
     {
