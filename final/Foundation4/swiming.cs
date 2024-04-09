@@ -25,7 +25,7 @@ class Swimming : Activity
     }
     public override string getsummary()
     {
-        string temp = ($"({date} Running ({time} min)- Distance: {getdistance()}miles, Speed: {getspeed()}mph, Pace: {getpace()}min per mile");
+        string temp = ($"({date} Swiming ({time} min)- Distance: {getdistance()}miles, Speed: {getspeed()}mph, Pace: {getpace()}min per mile");
         return ($"({temp}");
 
     }

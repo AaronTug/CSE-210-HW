@@ -23,7 +23,7 @@ class Cycling : Activity
     }
     public override string getsummary()
     {
-        return ($"({date} Running ({time} min)- Distance: {getdistance()}miles, Speed: {getspeed()}mph, Pace: {getpace()}min per mile");
+        return ($"({date} cycling ({time} min)- Distance: {getdistance()}miles, Speed: {getspeed()}mph, Pace: {getpace()}min per mile");
 
     }
 }
